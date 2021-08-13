@@ -1,10 +1,10 @@
 {
-  "name": "nodejs-project-stack_learner-email-verify",
+  "name": "nodejs-login-signup-project",
   "version": "1.0.0",
   "description": "nodejs Login Signup project with Stack Learner course - 'Dive Into NodeJS - NodeJS Bangla Course' - Playlist link: 'https://www.youtube.com/playlist?list=PL_XxuZqN0xVDHFj-ecFSU0SU-B0TuJRk9'",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "node app.js"
   },
   "keywords": [],
   "author": "Tasin Mir",
