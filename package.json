@@ -4,7 +4,7 @@
   "description": "nodejs Login Signup project with Stack Learner course - 'Dive Into NodeJS - NodeJS Bangla Course' - Playlist link: 'https://www.youtube.com/playlist?list=PL_XxuZqN0xVDHFj-ecFSU0SU-B0TuJRk9'",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "nodemon app.js"
   },
   "keywords": [],
   "author": "Tasin Mir",

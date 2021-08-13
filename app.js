@@ -81,8 +81,8 @@ const config = {
     DATABASE_NAME: process.env.DATABASE_NAME
 }
 
-const URL = `mongodb+srv://${config.DB_USERNAME}:${config.DB_USER_PASSWORD}@cluster0.h7kk2.mongodb.net/${config.DATABASE_NAME}`;
-// const URL = "mongodb://127.0.0.1:27017/nodejs-project-stack_email-verify";
+// const URL = `mongodb+srv://${config.DB_USERNAME}:${config.DB_USER_PASSWORD}@cluster0.h7kk2.mongodb.net/${config.DATABASE_NAME}`;
+const URL = "mongodb://127.0.0.1:27017/nodejs-project-stack_email-verify";
 
 mongoose.connect(URL, {useUnifiedTopology: true, useNewUrlParser: true})
 
