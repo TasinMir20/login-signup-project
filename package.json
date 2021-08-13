@@ -1,0 +1,22 @@
+{
+  "name": "nodejs-project-stack_learner-email-verify",
+  "version": "1.0.0",
+  "description": "nodejs Login Signup project with Stack Learner course - 'Dive Into NodeJS - NodeJS Bangla Course' - Playlist link: 'https://www.youtube.com/playlist?list=PL_XxuZqN0xVDHFj-ecFSU0SU-B0TuJRk9'",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "Tasin Mir",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "chalk": "^3.0.0",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "mongoose": "^5.13.0",
+    "morgan": "^1.10.0",
+    "nodemailer": "^6.6.3"
+  }
+}

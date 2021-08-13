@@ -1,0 +1,47 @@
+        <%- include("../../partials/header.ejs", {active: "signup-page-active"}) %>
+
+        <div class="container my-container my-5">
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <div class="card card-body">
+                        <h4 class="mb-3">Create a new Account</h4>
+                        <form action="/auth/signup" method="post">
+                            <div class="form-group">
+                                <label for="username">Username (Must be unique)</label>
+                                <input type="text" name="username" id="username" class="form-control <%= passDataToEjs.usrnmMsg ? 'is-invalid' : '' %>" value="<%= previousInputValue.username
+                                %>" placeholder="Enter an username" />
+                                <%- passDataToEjs.usrnmMsg %>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" name="email" id="email" class="form-control <%= passDataToEjs.emlMsg ? 'is-invalid' : '' %>" value="<%= previousInputValue.email
+                                %>" placeholder="Enter a valid email" />
+                                <%- passDataToEjs.emlMsg %>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" name="password" id="password" class="form-control <%= passDataToEjs.passMsg ? 'is-invalid' : '' %>" value="<%= previousInputValue.password
+                                %>"placeholder="Write a new Password" />
+                                <%- passDataToEjs.passMsg %>
+                            </div>
+                            <div class="form-group">
+                                <label for="confirm-password">Confirm Password</label>
+                                <input type="password" name="confirmPassword" id="confirm-password" class="form-control <%= passDataToEjs.passMsg ? 'is-invalid' : '' %>" placeholder="Re-write new Password" />
+                                <%- passDataToEjs.entrcnfmpass %>
+                            </div>
+                            <input type="submit" class="btn btn-primary" value="Sign Up" />
+                        </form>
+                        <%- passDataToEjs.userCreateSuccess %>
+                        <a href="/auth/login" class="my-3 text-center">Already have an account? Login!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <%- include("../../partials/footer.ejs") %>
+
+    </body>
+</htmL>

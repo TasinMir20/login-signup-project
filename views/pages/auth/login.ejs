@@ -1,0 +1,33 @@
+<%- include("../../partials/header.ejs", {active: "login-page-active"}) %>
+
+<div class="container my-container my-5">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="card card-body">
+                <h4 class="mb-3">Login to your Account</h4>
+                <form action="/auth/login" method="post">
+                    <div class="form-group">
+                        <label for="email-or-username">Email or username</label>
+                        <input type="text" name="emailOrUsername" id="email-or-username" class="form-control <%= passDataToEjs.emlOrUsernameMsg ? 'is-invalid' : '' %>" placeholder="Enter your email or username" value="<%= passDataToEjs.userExist ? previousInputValue.emailOrUsername : '' %>" />
+                        <%- passDataToEjs.emlOrUsernameMsg %>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" class="form-control <%= passDataToEjs.passMsg || passDataToEjs.notUserExist ? 'is-invalid' : '' %>" placeholder="Enter your password" />
+                        <%- passDataToEjs.passMsg %>
+                    </div>
+                    <input type="submit" class="btn btn-primary" value="Login" />
+                </form>
+                <a href="/auth/recovery" class="my-3 text-center">Forget password</a>
+                <a href="/auth/signup" class="my-3 text-center">Don't have an account? Create an account!</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<%- include("../../partials/footer.ejs") %>
+
+</body>
+</htmL>

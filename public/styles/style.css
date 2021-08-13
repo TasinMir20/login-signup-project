@@ -1,0 +1,90 @@
+/* defult valus start */
+
+* {
+    box-sizing: border-box;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: #333333;
+}
+img {
+    width: 100%;
+    height: auto;
+}
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+:focus {
+    outline: 0;
+}
+.section {
+    width: 100%;
+    padding: 90px 0;
+}
+.container {
+    width: 1170px;
+    margin: 0 auto;
+}
+
+.clearfix::after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+/* defult valus end */
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: rgb(245, 245, 245)
+}
+
+.my-container .jumbotron {
+    min-height: 700px;
+}
+
+
+
+.invalid-msg {
+    width: 100%;
+    margin-top: .25rem;
+    font-size: 80%;
+    color: #dc3545;
+}
+
+.valid-msg {
+    width: 100%;
+    margin-top: .25rem;
+    font-size: .875em;
+    color: #28a745;
+}
+
+
+@media all and (max-width: 576px) {
+    .container {
+        width: 100%;
+    }
+}
+
+footer {
+    background-color: #343a40;
+    color: aliceblue;
+    text-align: center;
+    padding: 20px 0;
+}

@@ -1,0 +1,42 @@
+<%- include("../../partials/header.ejs", {active: "signup-page-active"}) %>
+
+<div class="container my-container my-5">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            
+            <%if (passDataToEjs.userCreateSuccess) { %>
+                <p><%= "We send an verification mail to your email" %></p>
+            <% } %>
+            
+            <div class="card card-body">
+                <h4 class="mb-3">Verify your email address</h4>
+                <form action="" method="post">
+                    <input style="display:none;" class="seconds" type="text" value="<%= passDataToEjs.codeResentNextTime %>">
+                    <div class="form-group">
+                        <label for="verify_code">Enter verification code which one you most recent received <%= passDataToEjs.userEmail %></label>
+                        <input type="number" name="verify_code" id="verify_code" class="form-control" placeholder="Enter 6digit code" />
+                    </div>
+                    <input type="submit" class="btn btn-primary" value="Verify" />
+                    <a href="/auth/resend-verify-code" class="btn btn-secondary">Resend code</a>
+                </form>
+                <%- passDataToEjs.userCreateSuccess %>
+                <%- passDataToEjs.errorForFront %>
+                <h4 class="code-resend-time"></h4>
+
+            <% if (passDataToEjs.access) { %>
+
+                <div class="text-center"><a href="/logout">Log Out</a></div>
+
+            <% } %>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<%- include("../../partials/footer.ejs") %>
+<script src="/scripts/scripts.js"></script>
+
+</body>
+</htmL>

@@ -1,0 +1,36 @@
+<%- include("../../partials/header.ejs", {active: "login-page-active"}) %>
+
+<div class="container my-container my-5">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            
+            <%if (passDataToEjs.userCreateSuccess) { %>
+                <p><%= "We send an verification mail to your email" %></p>
+            <% } %>
+            
+            <div class="card card-body">
+                <h4 class="mb-3">Enter code</h4>
+                <form action="" method="post">
+                    <input style="display:none;" class="seconds" type="text" value="<%= passDataToEjs.codeResentNextTime %>">
+                    <div class="form-group">
+                        <input type="text" style="display: none;" name="code_submit_page" value="ok"/>
+                        <label for="recovery_code">Enter code</label>
+                        <input type="text" name="recovery_code" id="recovery_code" class="form-control <%= passDataToEjs.errorForFront && 'is-invalid' %>" placeholder="Enter recovery code" />
+                    </div>
+                    <input type="submit" class="btn btn-primary" value="Confirm" />
+                    <a href="/auth/recovery<%=passDataToEjs.uniqueId%>" class="btn btn-secondary">Resend recovery code</a>
+                </form>
+                <%- passDataToEjs.errorForFront %>
+                
+                <h4 class="code-resend-time"></h4>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<%- include("../../partials/footer.ejs") %>
+<script src="/scripts/scripts.js"></script>
+</body>
+</htmL>
