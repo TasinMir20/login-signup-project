@@ -2,8 +2,6 @@
 const {Schema, model} = require("mongoose");
 
 
-// const Profile = require("./Profile");
-
 const usercookieSchema = new Schema({
     userObject_idAsCookieIdentity: {
         type: String,
